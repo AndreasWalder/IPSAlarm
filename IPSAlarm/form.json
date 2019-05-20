@@ -22,6 +22,6 @@
 		{ "type": "Label", "caption": "Auswahl Ipsymcon Alexa Geräte für Textnachricht:" },
 		{ "type": "SelectInstance", "name": "AlexaInstanceID1", "caption": "Alexa Gerät 1" },
 		{ "type": "SelectInstance", "name": "AlexaInstanceID2", "caption": "Alexa Gerät 2" },
-		{ "type": "SelectInstance", "name": "AlexaInstanceID3", "caption": "Alexa Gerät 3" },
+		{ "type": "SelectInstance", "name": "AlexaInstanceID3", "caption": "Alexa Gerät 3" }
     ]
 }
