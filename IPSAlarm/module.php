@@ -115,13 +115,13 @@
 			$associations = '';
 			//$associations[] = ['Wert' => 1, 'Name' => 'Anwesend'];
 			//$associations[] = ['Wert' => 0, 'Name' => 'Abwesend'];
-			//$this->CreateVarProfile('IPSAlarm.ALARM', 1, ' min', 0, $this->ReadPropertyInteger("Duration"), 0, 1, 'Clock', $associations);			
-			//$this->RegisterVariableInteger("Ablaufzeit", "Ablaufzeit", "IPSAlarm.ALARM", 10);
+			$this->CreateVarProfile('IPSAlarm.Wiederholung', 1, ' min', 0, $this->ReadPropertyInteger("Duration"), 0, 1, 'Clock', $associations);			
+			$this->RegisterVariableInteger("Wiederholung", "Wiederholung", "IPSAlarm.Wiederholung", 10);
 			//$triggerID = $this->GetIDForIdent("Status");
             //$this->RegisterMessage($triggerID, 10603 /* VM_UPDATE */);
 			
 		
-			//SetValue($this->GetIDForIdent("Ablaufzeit"), $this->ReadPropertyInteger("Duration"));
+			SetValue($this->GetIDForIdent("Alarm Wiederholung"), $this->ReadPropertyInteger("Duration"));
 			//SetValue($this->GetIDForIdent("Dauer"), $this->ReadPropertyInteger("Duration"));
 			
 			
