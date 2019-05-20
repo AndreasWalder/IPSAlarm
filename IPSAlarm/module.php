@@ -6,7 +6,10 @@
         {
             //Never delete this line!
             parent::Create();
-            $this->RegisterPropertyInteger("Duration", 1);
+			
+			$this->RegisterPropertyString("AlexaDevices", "");
+            
+			$this->RegisterPropertyInteger("Duration", 1);
             $this->RegisterPropertyInteger("OutputID", 0);
 			
 			$this->RegisterPropertyBoolean ("Aktive", false);
@@ -123,6 +126,46 @@
 			//}
 			
         }
+		
+		
+		
+		public function GetConfigurationForm()
+		{
+			
+			$data = json_decode(file_get_contents(__DIR__ . "/form.json"));
+			
+			//Only add default element if we do not have anything in persistence
+			if($this->ReadPropertyString("AlexaDevices") == "") {			
+				$data->elements[0]->values[] = Array(
+					"instanceID" => 12435,
+					"name" => "ABCD",
+					"state" => "OK!",
+					"rowColor" => "#ff0000"
+				);
+			} else {
+				//Annotate existing elements
+				$AlexaDevices = json_decode($this->ReadPropertyString("AlexaDevices"));
+				foreach($AlexaDevices as $treeRow) {
+					//We only need to add annotations. Remaining data is merged from persistance automatically.
+					//Order is determinted by the order of array elements
+					if(IPS_ObjectExists($treeRow->instanceID)) {
+						$data->elements[0]->values[] = Array(
+							"name" => IPS_GetName($treeRow->instanceID),
+							"state" => "OK!"
+						);
+					} else {
+						$data->elements[0]->values[] = Array(
+							"name" => "Not found!",
+							"state" => "FAIL!",
+							"rowColor" => "#ff0000"
+						);
+					}						
+				}			
+			}
+			
+			return json_encode($data);
+		
+		}
 		
 		public function MessageSink ($TimeStamp, $SenderID, $Message, $Data) {
 			
