@@ -7,7 +7,9 @@
             //Never delete this line!
             parent::Create();
 			
-			$this->RegisterPropertyString("AlexaDevices", "");
+			$this->RegisterPropertyString("ListAlexaDevices", "");
+			$this->RegisterPropertyString("ListWochentage", "");
+			
             
 			$this->RegisterPropertyInteger("Duration", 1);
             $this->RegisterPropertyInteger("OutputID", 0);
@@ -135,12 +137,12 @@
 			$data = json_decode(file_get_contents(__DIR__ . "/form.json"));
 			
 			//Only add default element if we do not have anything in persistence
-			if($this->ReadPropertyString("AlexaDevices") == "") {			
+			if($this->ReadPropertyString("ListAlexaDevices") == "") {			
 				
 			} else {
 				//Annotate existing elements
-				$AlexaDevices = json_decode($this->ReadPropertyString("AlexaDevices"));
-				foreach($AlexaDevices as $treeRow) {
+				$ListAlexaDevices = json_decode($this->ReadPropertyString("ListAlexaDevices"));
+				foreach($ListAlexaDevices as $treeRow) {
 					//We only need to add annotations. Remaining data is merged from persistance automatically.
 					//Order is determinted by the order of array elements
 					if(IPS_ObjectExists($treeRow->instanceID)) {
@@ -150,6 +152,28 @@
 					} else {
 						$data->elements[0]->values[] = Array(
 							"state" => "FAIL!",
+							"rowColor" => "#ff0000"
+						);
+					}						
+				}			
+			}
+			
+			
+			//Only add default element if we do not have anything in persistence
+			if($this->ReadPropertyString("ListWochentage") == "") {			
+				
+			} else {
+				//Annotate existing elements
+				$ListWochentage = json_decode($this->ReadPropertyString("ListWochentage"));
+				foreach($ListWochentage as $treeRow) {
+					//We only need to add annotations. Remaining data is merged from persistance automatically.
+					//Order is determinted by the order of array elements
+					if(IPS_ObjectExists($treeRow->Wochentag)) {
+						$data->elements[0]->values[] = Array(
+							
+						);
+					} else {
+						$data->elements[0]->values[] = Array(
 							"rowColor" => "#ff0000"
 						);
 					}						
