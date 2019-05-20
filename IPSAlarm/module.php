@@ -7,21 +7,22 @@
             //Never delete this line!
             parent::Create();
 			
-			$this->RegisterPropertyString("ListAlexaDevices", "");
-			$this->RegisterPropertyString("ListWochentage", "");
-			$this->RegisterPropertyString("PushInstanceID", 1);
-			     
+			
+			
 			$this->RegisterPropertyInteger("Duration", 1);
+			$this->RegisterPropertyString("ListWochentage", "");
             $this->RegisterPropertyInteger("OutputID", 0);
 			
-			$this->RegisterPropertyInteger("PropertyTimeFrom", 0);
-			$this->RegisterPropertyInteger("PropertyTimeTo", 0);
+			$this->RegisterPropertyString("PropertyTimeFrom", "");
+			$this->RegisterPropertyString("PropertyTimeTo", "");
 			
 			$this->RegisterPropertyString("PushNachricht", "");
 			$this->RegisterPropertyBoolean ("PushAktiv", false);
+			$this->RegisterPropertyInteger("PushInstanceID", 0);
 			
 			$this->RegisterPropertyString("AlexaNachricht", "");
 			$this->RegisterPropertyBoolean ("AlexaAktiv", false);
+			$this->RegisterPropertyString("ListAlexaDevices", "");
 		
 			
 			// Erstellt einen Timer mit dem Namen und einem Intervall und ein Ziel. 
