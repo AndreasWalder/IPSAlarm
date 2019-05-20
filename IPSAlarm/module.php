@@ -13,8 +13,9 @@
 			$this->RegisterPropertyString("ListWochentage", "");
             $this->RegisterPropertyInteger("OutputID", 0);
 			
-			//$this->RegisterPropertyString("PropertyTimeFrom", "");
-			//$this->RegisterPropertyString("PropertyTimeTo", "");
+			$heute = date("H:i:s"); 
+			$this->RegisterPropertyString("PropertyTimeFrom", $heute);
+			$this->RegisterPropertyString("PropertyTimeTo", $heute);
 			
 			$this->RegisterPropertyString("PushNachricht", "");
 			$this->RegisterPropertyBoolean ("PushAktiv", false);
