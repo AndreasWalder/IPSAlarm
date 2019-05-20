@@ -1,0 +1,12 @@
+{
+	"id": "{FE853711-16A4-4334-CE0D-CEFE88878F1C}",
+	"author": "Andreas Walder",
+	"name": "IPSAlarm",
+	"url": "https://github.com/AndreasWalder/IPSAlarm",
+	"compatibility": {
+		"version": "5.0"
+	},
+	"version": "1.0",
+	"build": 0,
+	"date": 1041901144
+}

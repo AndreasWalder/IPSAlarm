@@ -1,0 +1,13 @@
+{
+	"id": "{FE853711-16A4-4334-CE0D-CEFE88878F1C}",
+	"name": "IPSAlarm",
+	"type": 3,
+	"vendor": "",
+	"aliases": [
+		"IPSAlarm"
+	],
+	"parentRequirements": [],
+	"childRequirements": [],
+	"implemented": [],
+	"prefix": "ALARM"
+}
