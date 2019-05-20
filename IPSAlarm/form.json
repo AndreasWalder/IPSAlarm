@@ -9,7 +9,7 @@
 		{ "type": "List", "name": "Wochentage", "caption": "Wochentage", "rowCount": 7, "add": true, "delete": true, "sort": {"column": "Name", "direction": "ascending"},
         "columns": [{"caption": "Wochentag", "name": "Wochentag", "width": "75px", "add": 0, "edit": {"type": "SelectInstance"}},
 		{"caption": "State", "name": "State", "width": "40px", "add": "New!"}}],
-        "values": [{"Wochentag": 12435, "Name": "ABCD", "State": "OK!"}]},
+        "values": [{"Wochentag": 12435, "Name": "ABCD", "State": "OK!", "rowColor": "#ff0000"}]},
 		{ "type": "Label", "caption": "" },
 		{ "type": "Label", "caption": "Push-Nachricht Einstellungen:" },
 		{ "type": "ValidationTextBox", "name": "PushNachricht", "caption": "Push-Nachricht" },
