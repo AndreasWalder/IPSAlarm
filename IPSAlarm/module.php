@@ -145,12 +145,10 @@
 					//Order is determinted by the order of array elements
 					if(IPS_ObjectExists($treeRow->instanceID)) {
 						$data->elements[0]->values[] = Array(
-							"name" => IPS_GetName($treeRow->instanceID),
 							"state" => "OK!"
 						);
 					} else {
 						$data->elements[0]->values[] = Array(
-							"name" => "Not found!",
 							"state" => "FAIL!",
 							"rowColor" => "#ff0000"
 						);
