@@ -9,13 +9,13 @@
 			
 			$this->RegisterPropertyString("ListAlexaDevices", "");
 			$this->RegisterPropertyString("ListWochentage", "");
-			$this->RegisterPropertyString("PushInstanceID", "");
+			$this->RegisterPropertyString("PushInstanceID", 1);
 			     
 			$this->RegisterPropertyInteger("Duration", 1);
             $this->RegisterPropertyInteger("OutputID", 0);
 			
-			$this->RegisterPropertyInteger("PropertyTimeFrom", "");
-			$this->RegisterPropertyInteger("PropertyTimeTo", "");
+			$this->RegisterPropertyInteger("PropertyTimeFrom", 0);
+			$this->RegisterPropertyInteger("PropertyTimeTo", 0);
 			
 			$this->RegisterPropertyString("PushNachricht", "");
 			$this->RegisterPropertyBoolean ("PushAktiv", false);
