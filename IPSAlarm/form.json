@@ -29,5 +29,5 @@
 		{ "type": "Label", "caption": "Auswahl Ipsymcon Alexa Geräte für Textnachricht:" },
 		{"type": "List","name": "AlexaDevices","caption": "AlexaDevices","rowCount": 5,"add": true,"delete": true,"sort": {"column": "Name","direction": "ascending"},
         "columns": [{"caption": "InstanceID","name": "InstanceID", "width": "75px","add": 0,"edit": {"type": "SelectInstance"}}, 
-		{"caption": "Name","name": "Name","width": "auto","add": ""}, 
-		{"caption": "State","name": "State","width": "40px","add": "New!"}]}
+		{"caption": "Name","name": "Name","width": "auto","add": ""}, {"caption": "State","name": "State","width": "40px","add": "New!"}],
+        "values": []}]}
