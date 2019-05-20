@@ -17,48 +17,48 @@
 			$this->RegisterTimer("CheckEvent", 0, "TIMER_CheckEvent(\$_IPS['TARGET']);");
 			
 			//Erstellen eines Variablenprofile für Typ Boolean
-			$associations = [];
-			$associations[] = ['Wert' => 1, 'Name' => 'An'];
-			$associations[] = ['Wert' => 0, 'Name' => 'Aus'];
-			$this->CreateVarProfile('IPSAlarm.STATUS', 0, '', 0, 0, 1, 1, 'Information', $associations);			
-			$this->RegisterVariableBoolean("Status", "Status", "IPSAlarm.STATUS", 5);
+			//$associations = [];
+			//$associations[] = ['Wert' => 1, 'Name' => 'An'];
+			//$associations[] = ['Wert' => 0, 'Name' => 'Aus'];
+			//$this->CreateVarProfile('IPSAlarm.STATUS', 0, '', 0, 0, 1, 1, 'Information', $associations);			
+			//$this->RegisterVariableBoolean("Status", "Status", "IPSAlarm.STATUS", 5);
 			
-			$this->RegisterVariableBoolean("Schalten", "Schalter", "~Switch", 0);
+			//$this->RegisterVariableBoolean("Schalten", "Schalter", "~Switch", 0);
 			
 			
-			$associations = [];
-			$associations[] = ['Wert' => 1, 'Name' => 'Taster', 'Farbe' => 0xFFD700];
-			$associations[] = ['Wert' => 0, 'Name' => ' ', 'Farbe' => -1];
-			$this->CreateVarProfile('IPSALARM.TASTEN', 0, '', 0, 0, 1, 1, 'Power', $associations);			
-			$this->RegisterVariableBoolean("Taster", "Taster", "IPSAlarm.TASTEN", 1);
+			//$associations = [];
+			//$associations[] = ['Wert' => 1, 'Name' => 'Taster', 'Farbe' => 0xFFD700];
+			//$associations[] = ['Wert' => 0, 'Name' => ' ', 'Farbe' => -1];
+			//$this->CreateVarProfile('IPSALARM.TASTEN', 0, '', 0, 0, 1, 1, 'Power', $associations);			
+			//$this->RegisterVariableBoolean("Taster", "Taster", "IPSAlarm.TASTEN", 1);
 			
 			//Erstellen eines Variablenprofile für Typ Boolean
-			$associations = [];
-			$associations[] = ['Wert' => true, 'Name' => 'An', 'Farbe' => 0x00BFFF]; //Farbe Blau
-			$associations[] = ['Wert' => false, 'Name' => 'Aus', 'Farbe' => -1];
-			$this->CreateVarProfile('IPSAlarm.AKTIV', 0, '', 0, 0, 1, 1, 'Power', $associations);
+			//$associations = [];
+			//$associations[] = ['Wert' => true, 'Name' => 'An', 'Farbe' => 0x00BFFF]; //Farbe Blau
+			//$associations[] = ['Wert' => false, 'Name' => 'Aus', 'Farbe' => -1];
+			//$this->CreateVarProfile('IPSAlarm.AKTIV', 0, '', 0, 0, 1, 1, 'Power', $associations);
 
 			
-			$this->RegisterVariableBoolean("Active", "Timer Aktiv", "IPSTimer.AKTIV", 20);	
+			//$this->RegisterVariableBoolean("Active", "Timer Aktiv", "IPSTimer.AKTIV", 20);	
 			
-			$associations = '';
+			//$associations = '';
 			//$associations[] = ['Wert' => 1, 'Name' => 'Anwesend'];
 			//$associations[] = ['Wert' => 0, 'Name' => 'Abwesend'];
-			$this->CreateVarProfile('IPSTimer.ALARM', 1, ' min', 0, $this->ReadPropertyInteger("Duration"), 0, 1, 'Clock', $associations);
-			$this->RegisterVariableInteger("Ablaufzeit", "Ablaufzeit", "IPSAlarm.ALARM", 10);
+			//$this->CreateVarProfile('IPSTimer.ALARM', 1, ' min', 0, $this->ReadPropertyInteger("Duration"), 0, 1, 'Clock', $associations);
+			//$this->RegisterVariableInteger("Ablaufzeit", "Ablaufzeit", "IPSAlarm.ALARM", 10);
 			
 			
-			$associations = '';
+			//$associations = '';
 			//$associations[] = ['Wert' => 1, 'Name' => 'Anwesend'];
 			//$associations[] = ['Wert' => 0, 'Name' => 'Abwesend'];
-			$this->CreateVarProfile('IPSAlarm.DAUER', 1, ' min', 0, 60, 1, 1, 'Clock', $associations);	
-			$this->RegisterVariableInteger("Dauer", "Dauer", "IPSAlarm.DAUER", 30);
+			//$this->CreateVarProfile('IPSAlarm.DAUER', 1, ' min', 0, 60, 1, 1, 'Clock', $associations);	
+			//$this->RegisterVariableInteger("Dauer", "Dauer", "IPSAlarm.DAUER", 30);
 	
 			
-			$this->EnableAction("Dauer");	
-            $this->EnableAction("Schalten");
-			$this->EnableAction("Taster");
-			$this->EnableAction("Active");
+			//$this->EnableAction("Dauer");	
+            //$this->EnableAction("Schalten");
+			//$this->EnableAction("Taster");
+			//$this->EnableAction("Active");
 			
         }
 		
@@ -98,29 +98,29 @@
 			$associations = '';
 			//$associations[] = ['Wert' => 1, 'Name' => 'Anwesend'];
 			//$associations[] = ['Wert' => 0, 'Name' => 'Abwesend'];
-			$this->CreateVarProfile('IPSAlarm.ALARM', 1, ' min', 0, $this->ReadPropertyInteger("Duration"), 0, 1, 'Clock', $associations);			
-			$this->RegisterVariableInteger("Ablaufzeit", "Ablaufzeit", "IPSAlarm.ALARM", 10);
-			$triggerID = $this->GetIDForIdent("Status");
-            $this->RegisterMessage($triggerID, 10603 /* VM_UPDATE */);
+			//$this->CreateVarProfile('IPSAlarm.ALARM', 1, ' min', 0, $this->ReadPropertyInteger("Duration"), 0, 1, 'Clock', $associations);			
+			//$this->RegisterVariableInteger("Ablaufzeit", "Ablaufzeit", "IPSAlarm.ALARM", 10);
+			//$triggerID = $this->GetIDForIdent("Status");
+            //$this->RegisterMessage($triggerID, 10603 /* VM_UPDATE */);
 			
 		
-			SetValue($this->GetIDForIdent("Ablaufzeit"), $this->ReadPropertyInteger("Duration"));
-			SetValue($this->GetIDForIdent("Dauer"), $this->ReadPropertyInteger("Duration"));
+			//SetValue($this->GetIDForIdent("Ablaufzeit"), $this->ReadPropertyInteger("Duration"));
+			//SetValue($this->GetIDForIdent("Dauer"), $this->ReadPropertyInteger("Duration"));
 			
 			
-			if ($this->ReadPropertyBoolean("SchalterEnable")) {
-			   IPS_SetHidden($this->GetIDForIdent("Schalten"), true); //Objekt verstecken
-			}
-			else {
-			   IPS_SetHidden($this->GetIDForIdent("Schalten"), false); //Objekt anzeigen
-			}
+			//if ($this->ReadPropertyBoolean("SchalterEnable")) {
+			//   IPS_SetHidden($this->GetIDForIdent("Schalten"), true); //Objekt verstecken
+			//}
+			//else {
+			//   IPS_SetHidden($this->GetIDForIdent("Schalten"), false); //Objekt anzeigen
+			//}
 			
-			if ($this->ReadPropertyBoolean("TasterEnable")) {
-			   IPS_SetHidden($this->GetIDForIdent("Taster"), true); //Objekt verstecken
-			}
-			else {
-			   IPS_SetHidden($this->GetIDForIdent("Taster"), false); //Objekt anzeigen
-			}
+			//if ($this->ReadPropertyBoolean("TasterEnable")) {
+			//   IPS_SetHidden($this->GetIDForIdent("Taster"), true); //Objekt verstecken
+			//}
+			//else {
+			//   IPS_SetHidden($this->GetIDForIdent("Taster"), false); //Objekt anzeigen
+			//}
 			
         }
 		
