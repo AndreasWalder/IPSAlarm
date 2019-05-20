@@ -13,11 +13,12 @@
 		{ "type": "Label", "caption": "" },
 		{ "type": "ValidationTextBox", "name": "PushNachricht", "caption": "Push-Nachricht" },
 		{ "type": "CheckBox", "name": "PushAktiv", "caption": "Push-Nachricht Aktiv"},
+		{ "type": "SelectInstance", "name": "PushInstanceID", "caption": "Auswahl Ipsymcon WebFront Konfiguration" },
 		{ "type": "ValidationTextBox", "name": "AlexaNachricht", "caption": "Alexa-Nachricht" },
 		{ "type": "CheckBox", "name": "AlexaAktiv", "caption": "Alexa-Nachricht Aktiv"},
-		{ "type": "SelectInstance", "name": "AlexaInstanceID", "caption": "Alexa Gerät" },
-		{ "type": "SelectInstance", "name": "AlexaInstanceID1", "caption": "Alexa Gerät 2" },
-		{ "type": "SelectInstance", "name": "AlexaInstanceID2", "caption": "Alexa Gerät 3" },
+		{ "type": "SelectInstance", "name": "AlexaInstanceID1", "caption": "Auswahl Alexa Gerät 1" },
+		{ "type": "SelectInstance", "name": "AlexaInstanceID2", "caption": "Auswahl Alexa Gerät 2" },
+		{ "type": "SelectInstance", "name": "AlexaInstanceID3", "caption": "Auswahl Alexa Gerät 3" },
 		{ "type": "Label", "caption": "" },
 		{ "type": "CheckBox", "name": "Aktiv", "caption": "Alarm Meldungen Aktiv"}
     ]
