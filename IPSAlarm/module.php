@@ -140,17 +140,18 @@
 					"instanceID" => 12435,
 					"name" => "ABCD",
 					"state" => "OK!",
+					"temperature" => 23.31,
 					"rowColor" => "#ff0000"
 				);
 			} else {
 				//Annotate existing elements
 				$AlexaDevices = json_decode($this->ReadPropertyString("AlexaDevices"));
-				foreach($AlexaDevices as $treeRow) {
+				foreach($AlexaDevices as $AlexaRow) {
 					//We only need to add annotations. Remaining data is merged from persistance automatically.
 					//Order is determinted by the order of array elements
-					if(IPS_ObjectExists($treeRow->instanceID)) {
+					if(IPS_ObjectExists($AlexaRow->instanceID)) {
 						$data->elements[0]->values[] = Array(
-							"name" => IPS_GetName($treeRow->instanceID),
+							"name" => IPS_GetName($AlexaRow->instanceID),
 							"state" => "OK!"
 						);
 					} else {
