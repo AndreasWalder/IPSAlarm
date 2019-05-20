@@ -28,6 +28,6 @@
 		{ "type": "CheckBox", "name": "AlexaAktiv", "caption": "Alexa-Nachricht Aktiv"},
 		{ "type": "Label", "caption": "Auswahl Ipsymcon Alexa Geräte für Textnachricht:" },
 		{"type": "List","name": "TreeData","caption": "Devices","rowCount": 5,"add": true,"delete": true,
-        "columns": [{"caption": "Name","name": "instanceID", "width": "320px","add": 0,"edit": {"type": "SelectInstance"}}, 
+        "columns": [{"caption": "Name","name": "instanceID", "width": "520px","add": 0,"edit": {"type": "SelectInstance"}}, 
 		{"caption": "State","name": "State","width": "40px","add": "New!"}],
         "values": []}]}
