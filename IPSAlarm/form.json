@@ -6,7 +6,7 @@
         { "type": "NumberSpinner", "name": "Duration", "caption": "Alarm Wiederholung", "suffix": "min"},
 		{ "type": "SelectTime", "name": "PropertyTimeFrom", "caption": "Alarm von" },
 		{ "type": "SelectTime", "name": "PropertyTimeTo", "caption": "Alarm bis" },
-		{ "type": "List", "name": "Wochentage", "caption": "Wochentage", "rowCount": 7, "add": true, "delete": true,"sort": {"column": "Wochentag", "direction": "ascending"}, "columns": [{"caption": "Wochentag", "name": "Wochentag", "width": "75px", "add": 0, "edit": {"type": "Select"}}, 
+		{ "type": "List", "name": "Wochentage", "caption": "Wochentage", "rowCount": 5, "add": true, "delete": true, "columns": [{"caption": "Wochentag", "name": "Wochentag", "width": "75px", "add": 0, "edit": {"type": "Select"}}, 
         { "caption": "Wochentag", "name": "Wochentag", "width": "auto", "add": ""}]},
 		{ "type": "Label", "caption": "" },
 		{ "type": "Label", "caption": "Push-Nachricht Einstellungen:" },
