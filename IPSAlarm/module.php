@@ -16,8 +16,8 @@
 			$timestamp = time(); 
             $datum = date("d.m.Y",$timestamp); 
             $uhrzeit = date("H:i:s",$timestamp);  
-			$this->RegisterPropertyInteger("PropertyTimeFrom", $uhrzeit);
-			$this->RegisterPropertyInteger("PropertyTimeTo", $uhrzeit);
+			$this->RegisterPropertyString("PropertyTimeFrom", $uhrzeit);
+			$this->RegisterPropertyString("PropertyTimeTo", $uhrzeit);
 			
 			$this->RegisterPropertyString("PushNachricht", "");
 			$this->RegisterPropertyBoolean ("PushAktiv", false);
