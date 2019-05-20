@@ -2,7 +2,7 @@
     "elements":
     [
 	    { "type": "Label", "caption": "Konfiguration IPS-Alarm:" },
-        { "type": "SelectVariable", "name": "OutputID", "caption": "Alarm Variable"},
+        { "type": "SelectVariable", "name": "OutputID", "caption": "Alarm Variable", "width": "520px"},
         { "type": "NumberSpinner", "name": "Duration", "caption": "Alarm Wiederholung", "suffix": "min"},
 		{ "type": "SelectTime", "name": "PropertyTimeFrom", "caption": "Alarm von" },
 		{ "type": "SelectTime", "name": "PropertyTimeTo", "caption": "Alarm bis" },
