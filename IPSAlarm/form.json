@@ -6,9 +6,40 @@
         { "type": "NumberSpinner", "name": "Duration", "caption": "Alarm Wiederholung", "suffix": "min"},
 		{ "type": "SelectTime", "name": "PropertyTimeFrom", "caption": "Alarm von" },
 		{ "type": "SelectTime", "name": "PropertyTimeTo", "caption": "Alarm bis" },
-        {"type": "List", "name": "sortList", "rowCount": 7, "add": true, "columns": [{"label": "Wochentag", "name": "Text", "width": "auto", "sortColumn": "Number"},
-        {"label": "Number","name": "Number", "width": "200px","visible": false}],
-        "values": [{"Text": "Montag", "Number": "1"},{"Text": "Dienstag", "Number": "2"},{"Text": "Mittwoch","Number": "3"}]},
+		{"type": "List", "name": "Devices", "caption": "Devices", "rowCount": 5, "add": true, "delete": true, "sort": {"column": "Name", "direction": "ascending", 
+		"columns": [{
+        "caption": "InstanceID",
+        "name": "InstanceID", 
+        "width": "75px",
+        "add": 0,
+        "edit": {
+        "type": "SelectInstance"
+        }
+        }, {
+        "caption": "Name",
+        "name": "Name",
+        "width": "auto",
+        "add": ""
+        }, {
+        "caption": "State",
+        "name": "State",
+        "width": "40px",
+        "add": "New!"
+        }, {
+        "caption": "Temperature",
+        "name": "Temperature",
+        "width": "75px",
+        "add": 20.0,
+        "edit": {"type": "NumberSpinner", "digits": 2}
+        }],
+        "values": [{
+        "InstanceID": 12435,
+        "Name": "ABCD",
+        "State": "OK!",
+        "Temperature": 23.31,
+        "rowColor": "#ff0000" //rot
+        }]
+        },    
 		{ "type": "Label", "caption": "" },
 		{ "type": "Label", "caption": "Push-Nachricht Einstellungen:" },
 		{ "type": "ValidationTextBox", "name": "PushNachricht", "caption": "Push-Nachricht" },
