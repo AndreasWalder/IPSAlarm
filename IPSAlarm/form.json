@@ -6,6 +6,41 @@
         { "type": "NumberSpinner", "name": "Duration", "caption": "Alarm Wiederholung", "suffix": "min"},
 		{ "type": "SelectTime", "name": "PropertyTimeFrom", "caption": "Alarm von" },
 		{ "type": "SelectTime", "name": "PropertyTimeTo", "caption": "Alarm bis" },
+		// Liste mit alternativer Sortierung
+{
+    "type": "List",
+    "name": "sortList",
+    "rowCount": 5,
+    "add": false,
+    "columns": [
+        {
+            "label": "Text",
+            "name": "Text",
+            "width": "auto",
+            "sortColumn": "Number"
+        },
+        {
+            "label": "Number",
+            "name": "Number",
+            "width": "200px",
+            "visible": false
+        }
+    ],
+    "values": [
+        {
+            "Text": "One",
+            "Number": "1"
+        },
+        {
+            "Text": "Two",
+            "Number": "2"
+        },
+        {
+            "Text": "Three",
+            "Number": "3"
+        }
+    ]
+},
 		{ "type": "Label", "caption": "" },
 		{ "type": "Label", "caption": "Push-Nachricht Einstellungen:" },
 		{ "type": "ValidationTextBox", "name": "PushNachricht", "caption": "Push-Nachricht" },
@@ -20,8 +55,5 @@
 		{ "type": "SelectInstance", "name": "AlexaInstanceID1", "caption": "Alexa Gerät 1" },
 		{ "type": "SelectInstance", "name": "AlexaInstanceID2", "caption": "Alexa Gerät 2" },
 		{ "type": "SelectInstance", "name": "AlexaInstanceID3", "caption": "Alexa Gerät 3" },
-		{ "type": "Label", "caption": "" },
-		{ "type": "Label", "caption": "Allgemeine Einstellungen:" },
-		{ "type": "CheckBox", "name": "Aktiv", "caption": "Alarm Meldungen Aktiv"}
     ]
 }
