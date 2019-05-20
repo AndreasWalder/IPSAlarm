@@ -9,13 +9,12 @@
             $this->RegisterPropertyInteger("Duration", 1);
             $this->RegisterPropertyInteger("OutputID", 0);
 			
-			$this->RegisterPropertyBoolean ("SchalterEnable", false);
-            $this->RegisterPropertyBoolean ("TasterEnable", false);
+			$this->RegisterPropertyBoolean ("Aktive", false);
 			
 			// Erstellt einen Timer mit dem Namen und einem Intervall und ein Ziel. 
-            $this->RegisterTimer("OffTimer", 0, "ALARM_Stop(\$_IPS['TARGET']);");
-			$this->RegisterTimer("Update", 0, "ALARM_Update(\$_IPS['TARGET']);");
-			$this->RegisterTimer("CheckEvent", 0, "ALARM_CheckEvent(\$_IPS['TARGET']);");
+            $this->RegisterTimer("OffTimer", 0, "TIMER_Stop(\$_IPS['TARGET']);");
+			$this->RegisterTimer("Update", 0, "TIMER_Update(\$_IPS['TARGET']);");
+			$this->RegisterTimer("CheckEvent", 0, "TIMER_CheckEvent(\$_IPS['TARGET']);");
 			
 			//Erstellen eines Variablenprofile für Typ Boolean
 			$associations = [];
