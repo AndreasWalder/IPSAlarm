@@ -6,7 +6,7 @@
         { "type": "NumberSpinner", "name": "Duration", "caption": "Alarm Wiederholung", "suffix": "min"},
 		{ "type": "SelectTime", "name": "PropertyTimeFrom", "caption": "Alarm von" },
 		{ "type": "SelectTime", "name": "PropertyTimeTo", "caption": "Alarm bis" },
-		{ "type": "List", "name": "Wochentage", "caption": "Wochentage", "rowCount": 7, "add": true, "delete": true, "sort": {"column": "Name", "direction": "ascending"},
+		{ "type": "List", "name": "Wochentage", "caption": "Wochentage", "rowCount": 7, "add": true, "delete": true, "sort": {"column": "Wochentag", "direction": "ascending"},
         "columns": [{"caption": "Wochentag", "name": "Wochentag", "width": "75px", "add": 0, "edit": { "type": "Select", "name": "DeviceType", "caption": "Einheit",
         "options": [
         { "caption": "Bit (1Bit)", "value": 0 },
