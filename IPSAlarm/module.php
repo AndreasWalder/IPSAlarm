@@ -121,7 +121,7 @@
             //$this->RegisterMessage($triggerID, 10603 /* VM_UPDATE */);
 			
 		
-			SetValue($this->GetIDForIdent("Alarm Wiederholung"), $this->ReadPropertyInteger("Duration"));
+			SetValue($this->GetIDForIdent("Wiederholung"), $this->ReadPropertyInteger("Duration"));
 			//SetValue($this->GetIDForIdent("Dauer"), $this->ReadPropertyInteger("Duration"));
 			
 			
