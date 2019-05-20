@@ -136,13 +136,7 @@
 			
 			//Only add default element if we do not have anything in persistence
 			if($this->ReadPropertyString("TreeData") == "") {			
-				$data->elements[0]->values[] = Array(
-					"instanceID" => 12435,
-					"name" => "ABCD",
-					"state" => "OK!",
-					"temperature" => 23.31,
-					"rowColor" => "#ff0000"
-				);
+				
 			} else {
 				//Annotate existing elements
 				$treeData = json_decode($this->ReadPropertyString("TreeData"));
