@@ -40,7 +40,7 @@
 			//$this->CreateVarProfile('IPSAlarm.STATUS', 0, '', 0, 0, 1, 1, 'Information', $associations);			
 			//$this->RegisterVariableBoolean("Status", "Status", "IPSAlarm.STATUS", 5);
 			
-			//$this->RegisterVariableBoolean("Schalten", "Schalter", "~Switch", 0);
+			$this->RegisterVariableBoolean("Test", "Test", "~Switch", 0);
 			
 			
 			//$associations = [];
