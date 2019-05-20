@@ -9,6 +9,6 @@
 		{ "type": "Label", "caption": "" },
 		{ "type": "Label", "caption": "Style im Webfront:" },
 		{ "type": "Label", "caption": "" },
-		{ "type": "CheckBox", "name": "Aktiv", "caption": "Meldung Aktiv"},
+		{ "type": "CheckBox", "name": "Aktiv", "caption": "Meldung Aktiv"}
     ]
 }
