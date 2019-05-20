@@ -9,12 +9,20 @@
 			
 			$this->RegisterPropertyString("ListAlexaDevices", "");
 			$this->RegisterPropertyString("ListWochentage", "");
-			
-            
+			$this->RegisterPropertyString("PushInstanceID", 1);
+			     
 			$this->RegisterPropertyInteger("Duration", 1);
             $this->RegisterPropertyInteger("OutputID", 0);
 			
-			$this->RegisterPropertyBoolean ("Aktive", false);
+			$this->RegisterPropertyInteger("PropertyTimeFrom", 0);
+			$this->RegisterPropertyInteger("PropertyTimeTo", 0);
+			
+			$this->RegisterPropertyString("PushNachricht", 1);
+			$this->RegisterPropertyBoolean ("PushAktiv", false);
+			
+			$this->RegisterPropertyString("AlexaNachricht", 1);
+			$this->RegisterPropertyBoolean ("AlexaAktiv", false);
+		
 			
 			// Erstellt einen Timer mit dem Namen und einem Intervall und ein Ziel. 
             $this->RegisterTimer("OffTimer", 0, "TIMER_Stop(\$_IPS['TARGET']);");
