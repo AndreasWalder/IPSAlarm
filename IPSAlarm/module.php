@@ -7,7 +7,7 @@
             //Never delete this line!
             parent::Create();
 			
-			$this->RegisterPropertyString("TreeData", "");
+			$this->RegisterPropertyString("AlexaDevices", "");
             
 			$this->RegisterPropertyInteger("Duration", 1);
             $this->RegisterPropertyInteger("OutputID", 0);
@@ -135,12 +135,12 @@
 			$data = json_decode(file_get_contents(__DIR__ . "/form.json"));
 			
 			//Only add default element if we do not have anything in persistence
-			if($this->ReadPropertyString("TreeData") == "") {			
+			if($this->ReadPropertyString("AlexaDevices") == "") {			
 				
 			} else {
 				//Annotate existing elements
-				$treeData = json_decode($this->ReadPropertyString("TreeData"));
-				foreach($treeData as $treeRow) {
+				$AlexaDevices = json_decode($this->ReadPropertyString("AlexaDevices"));
+				foreach($AlexaDevices as $treeRow) {
 					//We only need to add annotations. Remaining data is merged from persistance automatically.
 					//Order is determinted by the order of array elements
 					if(IPS_ObjectExists($treeRow->instanceID)) {
