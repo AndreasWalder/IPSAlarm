@@ -16,11 +16,11 @@
 			$this->RegisterPropertyString("PropertyTimeFrom", "");
 			$this->RegisterPropertyString("PropertyTimeTo", "");
 			
-			$this->RegisterPropertyString("PushNachricht", "");
+			$this->RegisterPropertyString("PushNachricht", " ");
 			$this->RegisterPropertyBoolean ("PushAktiv", false);
 			$this->RegisterPropertyInteger("PushInstanceID", 0);
 			
-			$this->RegisterPropertyString("AlexaNachricht", "");
+			$this->RegisterPropertyString("AlexaNachricht", " ");
 			$this->RegisterPropertyBoolean ("AlexaAktiv", false);
 			$this->RegisterPropertyString("ListAlexaDevices", "");
 		
